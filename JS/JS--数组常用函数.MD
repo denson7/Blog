@@ -1,7 +1,7 @@
-#数组常用方法
-
-##常用方法
-###获取数组中的最大/小值
+# 数组常用方法
+ 
+## 常用方法
+### 获取数组中的最大/小值
 ```
 // 使用apply
 const arr = [2, 23, 61, 15, 20, '11'];
@@ -21,8 +21,8 @@ arr.sort((a, b) => a -b); // a-b(从小到大), b-a(从大到小)
 console.log('最大值：', arr[arr.length - 1]); // 61
 console.log('最小值：', arr[0]); // 2
 ```
-###遍历获取对象的key和value
-```
+### 遍历获取对象的key和value
+``` 
 const obj = {
   objective: 'binary:logistic',
   numRound: 20,
@@ -63,7 +63,7 @@ for ( const val of Object.values(obj)) {
   console.log(val)
 }
 ```
-###数组去重
+### 数组去重
 ```
 # 使用lodash的uniq()方法
 var arr = [1, 2, 1, 2, '1', '11'];
@@ -86,7 +86,7 @@ function unique(array){
 
 console.log(unique(arr));//[1, 2, "1", "11"]
 ```
-###数组求和
+### 数组求和
 ```
 // reduce()方法用于对数组中的所有元素调用指定的回调函数，该回调函数的返回值为累积结果，并且将上一次计算的返回值作为参数传递给下一次调用的回调函数。
 // array.reduce(callback[, initialValue]); //callback是调用方法,initialValue是callback初次调用时的第一个参数值
@@ -102,7 +102,7 @@ const res2 = obj.reduce((prev,next)=>{
 },0);
 console.log(res2);// 30 (1+4+9+16)
 ```
-###统计数组中相同项的个数
+### 统计数组中相同项的个数
 ```
 var cars = ['BMW','Benz', 'Benz', 'Tesla', 'BMW', 'Toyota'];
 var carsObj = cars.reduce(function (obj, name) {
@@ -111,7 +111,7 @@ var carsObj = cars.reduce(function (obj, name) {
 }, {});
 console.log(carsObj); // => { BMW: 2, Benz: 2, Tesla: 1, Toyota: 1 }
 ```
-###过滤数组
+### 过滤数组
 ```
 const users = [
   { name: 'tom', age: 10, isStudent: true },
@@ -131,7 +131,7 @@ const newArr = arr.filter(function (ele, i, array) {
 });
 console.log(newArr);//[1500, 1200, 1800]
 ```
-###删除数组中的空值
+### 删除数组中的空值
 ```
 // 使用filter过滤
 const arr = [undefined,undefined,1,'','false',false,true,null,'null']
@@ -139,20 +139,20 @@ const res = _.filter(arr, o => o) // [1, "false", true, "null"]
 // 使用compact去除假值(将所有的false, null, 0, "", undefined, 和 NaN 过滤)
 const res2 = _.compact(arr) //  [1, "false", true, "null"]
 ```
-###删除数组中的某个值
+### 删除数组中的某个值
 ```
 const ages = [32, 33, 16, 40]
 const res = ages.filter((item)=>item != 40)
 console.log(res) // [32, 33, 16]
 ```
-###求两个数组的交集
+### 求两个数组的交集
 ```
 var arr1 = [1, 2, 3, 4, 5];
 var arr2 = [4, 5, 6, 7, 8, 9]
 var result = arr1.filter(function(n){ return arr2.indexOf(n) > -1 });
 console.log(result); // [4, 5]
 ```
-###对数组对象进行排序
+### 对数组对象进行排序
 ```
 #方法一自定义函数
 function orderByProperty(prop) {
@@ -208,7 +208,7 @@ _.sortBy(users, ['user', 'age']);
 // => objects for [['barney', 34], ['barney', 36], ['fred', 40], ['fred', 48]]
 ```
 
-###从数组对象中根据一个对象中的值，获取该对象
+### 从数组对象中根据一个对象中的值，获取该对象
 ```
 #使用lodash
 var users = [
@@ -233,7 +233,7 @@ _.find(users, 'active');
 // => object for 'barney'
 
 ```
-###判断数组中是否存在某个值
+### 判断数组中是否存在某个值
 ```
 #使用lodash (推荐)
 const a1 = ['a','b','c']
@@ -258,7 +258,7 @@ arr.includes("Sam")  //true
 const arr = ["Sam", "Great", "Sample", "High"]
 arr.indexOf("Sam") > -1 
 ```
-###获取一个数组对象中某一列的所有key值
+### 获取一个数组对象中某一列的所有key值
 ```
 #使用lodash
 const list = [
@@ -269,7 +269,7 @@ const list = [
 const keys = _.map(list,(item) => (item.key))
 console.log(keys) // ["model_name", "model_version", "task_type"]
 ```
-###判断一个数组是否包含另一个数组
+### 判断一个数组是否包含另一个数组
 ```
 /**
  * 判断一个数组是否包含另一个数组
@@ -287,7 +287,7 @@ export const isContained = (a, b) => {
   return true
 }
 ```
-###二维(多维)数组转为一维数组
+### 二维(多维)数组转为一维数组
 ```
 #二维数组转化为一维数组
 // 方法一
@@ -339,14 +339,14 @@ const arr3 = [11, [22, 33], [44, [55, 66, [77, [88]], 99]]];
 const flatArr3 = flatten(arr3);
 console.log(flatArr3); //[11, 22, 33, 44, 55, 66, 77, 88, 99]
 ```
-##不改变自身的方法
-###slice() 拷贝数组中的一部分，返回拷贝后的新数组
+## 不改变自身的方法
+### slice() 拷贝数组中的一部分，返回拷贝后的新数组
 ```
 let arr = [1,2,3,4,5];
 let arr1 = arr.slice(1,3); // arr是[1,2,3,4,5]， arr1是[2,3]
 let arr2 = arr.slice(-2,-1);  // arr是[1,2,3,4,5], arr2是[4]
 ```
-###join() 将数组转换为字符串，返回字符串
+### join() 将数组转换为字符串，返回字符串
 ```
 let num = [1,2,3];
 let str1 = num.join(); // 1,2,3 默认是逗号连接
@@ -363,12 +363,12 @@ let str1 = num.join('-'); // 1,2-3
 const arr = [11, [22, 33], [44, 55], 66];
 const flatArr = arr.join().split(','); // ["11", "22", "33", "44", "55", "66"]
 ```
-###toString() 转换数组为字符串，并输出以逗号分隔的字符串列表
+### toString() 转换数组为字符串，并输出以逗号分隔的字符串列表
 ```
 [1,2,3].toString(); // 1,2,3
 [1,[2,'c']].toString(); //1,2,c
 ```
-###concat() 合并两个或多个数组，返回合并后的新数组
+### concat() 合并两个或多个数组，返回合并后的新数组
 ```
 [1,2,3].concat([4,5,6],[7,8,9]) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ['a','b','c'].concat(1,[2,3],[[4,5]]) // ["a", "b", "c", 1, 2, 3, [4,5]]
@@ -377,34 +377,34 @@ const flatArr = arr.join().split(','); // ["11", "22", "33", "44", "55", "66"]
 const arr = [11, [22, 33], [44, 55], 66];
 const flatArr = [].concat(...arr); // [11, 22, 33, 44, 55, 66]
 ```
-##会改变自身的方法
-###push() 往数组的尾部添加一个或多个元素，并返回数组长度
+## 会改变自身的方法
+### push() 往数组的尾部添加一个或多个元素，并返回数组长度
 ```
 let arr = [1,2,3];
 let length = arr.push('aa','bb');    // 返回数组长度
 console.log(arr,length)
 // [1, 2, 3, "aa", "bb"] 5
 ```
-###prop() 删除数组的最后一个元素，并返回删除的值
+### prop() 删除数组的最后一个元素，并返回删除的值
 ```
 let arr= [1,2,3];
 arr.pop()    // 返回删除的值3
 ```
-###unshift() 往数组的头部添加一个或多个元素，并返回数组的长度
+### unshift() 往数组的头部添加一个或多个元素，并返回数组的长度
 ```
 let arr = [3,4,5];
 let length = arr.unshift(1,2);  // 返回长度是5
 console.log(arr, length)
 //[1, 2, 3, 4, 5] 5
 ```
-###shift() 删除数组的第一个元素,并返回删除的值
+### shift() 删除数组的第一个元素,并返回删除的值
 ```
 let arr = [1,2,3];
 let item = arr.shift(); // 返回删除的值1
 console.log(arr, item)
 // [2, 3] 1
 ```
-###splice() 删除数组中的元素，返回原数组删除后的值（亦可在指定位置插入元素）
+### splice() 删除数组中的元素，返回原数组删除后的值（亦可在指定位置插入元素）
 ```
 // start不超过数组长度(以下操作是连续的)
 let arr = [1,2,3,4,5];
@@ -428,7 +428,7 @@ let arr = [1,4,5];
 arr.splice(1,0,[2,3])  // arr是[1,[2,3],4,5]，返回值是[]
 arr.splice(index, 0, val) // index插入位置的索引，val表插入的元素
 ```
-###sort() 数组排序，返回排序后的数组
+### sort() 数组排序，返回排序后的数组
 `备注：`sort()函数比较的是ASCII码的大小，而且数组的sort()方法默认是把所有元素先转换为String再排序，所以，直接使用sort()排序，会出现以下问题：
 ```
 // baiDu排在了最后:
@@ -444,12 +444,12 @@ arr.splice(index, 0, val) // index插入位置的索引，val表插入的元素
 // 结果
 [1, 2, 10, 20]
 ```    
-###reverse() 将数组中的元素颠倒顺序，返回逆序的数组
+### reverse() 将数组中的元素颠倒顺序，返回逆序的数组
 ```
 let arr = [1,2,3];
 arr.reverse()  // arr是[3,2,1]，返回值是[3,2,1]
 ```
-###fill() 用一个固定值填充一个数组中从起始索引到终止索引内的全部元素
+### fill() 用一个固定值填充一个数组中从起始索引到终止索引内的全部元素
 ```
 [1, 2, 3].fill(4);              // [4, 4, 4]
 [1, 2, 3].fill(4, 1);            // [1, 4, 4]

@@ -1,5 +1,5 @@
-#字符串常用函数
-##获取字符串长度(含中文)
+# 字符串常用函数
+## 获取字符串长度(含中文)
 ```
 // 方法一
 getStringLength = (str) => {
@@ -28,7 +28,8 @@ getStringLength = (str) => {
   return str.replace(/[\u0391-\uFFE5]/g,"aa").length;
 }
 ```
-##字符串去重
+
+## 字符串去重
 ```
 // 字符串去重
 uniqueString = (str) => {
@@ -42,7 +43,7 @@ uniqueString = (str) => {
   return res.join("")
 }
 ```
-##获取字符串中字符出现的次数
+## 获取字符串中字符出现的次数
 ```
 // 获取字符串中每个字符出现的次数
 getCountNum = (str) => {
@@ -69,7 +70,7 @@ getCountNum = (str) => {
   return res
 }
 ```
-##获取最长的子串
+## 获取最长的子串
 ```
 lengthOfLongestSubstring = (s) => {
   // 用于存放当前最长无重复子串的长度
@@ -92,7 +93,7 @@ lengthOfLongestSubstring = (s) => {
   return obj;
 };
 ```
-##删除字符中最后一个被指定的字符
+## 删除字符中最后一个被指定的字符
 ```
 // 删除字符串中最后一个被指定的字符(单个字符)
 // 方法一
