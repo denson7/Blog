@@ -1,2 +1,3 @@
-# Blog
-Blog Notes
+# Note
+Denson Notes
+
