@@ -1,7 +1,7 @@
-###判断this指向的对象
+### 判断this指向的对象
 1. `this`的值通常是由所在函数的`执行环境`决定，也就是说要看函数是`如何被调用的`；
 2. 同一个函数每一次调用，this都可能指向不同的对象；
-###全局对象(Global Object)
+### 全局对象(Global Object)
 ```
 //在浏览器控制台直接
 console.log(this);
@@ -29,7 +29,7 @@ test();
 ```
 
 
-###声明的对象(Declared Object)
+### 声明的对象(Declared Object)
 当this关键字在一个声明对象的内部使用，其值会被`绑定`到`调用该this的函数`的`最近的父对象`。
 例如:
 ```
@@ -73,7 +73,7 @@ person.personTwo.full();
 ```
 可以看出规则就是，**`this其值会被绑定到调用this的函数的最近的父对象上`**。
 
-###New 关键字
+### New 关键字
 当使用`new`关键字构建一个新的对象，this会`绑定`到这个新对象。我们来看一个例子：
 ```
 function Car(make, model) {
@@ -86,7 +86,7 @@ var myCar = new Car('Ford', 'Escape');
 console.log(myCar);
 // 输出 Car {make: "Ford", model: "Escape"}
 ```
-###call, bind, 和apply
+### call, bind, 和apply
 我们可以在call()，bind()，apply()中设置this的绑定对象。这三个函数很类似，但是我们需要注意它们微小的区别。
 例子
 ```
@@ -146,7 +146,7 @@ console.log(bindTest);
 bindTest(3, 4);
 // 输出 109
 ```
-###总结
+### 总结
 1. this的值通常是`由当前函数的执行环境`所决定；
 2. 在`全局作用域`，this指向`全局对象` (window对象)；
 3. 当使用`new关键字`声明，this指向`新建对象`；

@@ -1,5 +1,5 @@
-##Yarn常用命令
-###安装
+## Yarn常用命令
+### 安装
 ```
 // 全局安装
 npm install -g yarn
@@ -13,7 +13,7 @@ yarn config get registry
 yarn config set registry https://registry.npm.taobao.org
 ```
 
-###与npm对比使用
+### 与npm对比使用
 
 |Npm|Yarn|命令说明|
 |--|--|

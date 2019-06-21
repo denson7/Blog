@@ -1,6 +1,6 @@
 
-##typeof和instanceof区别
-###typeof
+## typeof和instanceof区别
+### typeof
 typeof 可以用于检测基本数据类型和引用数据类型。
 ```
 typeof variable
@@ -21,7 +21,7 @@ console.log(typeof(function(){})); // "function"
 ```
 typeof主要用于`检测基本数据类型`：数值、字符串、布尔值、undefined， 因为typeof用于检测引用类型值时，对于任何Object对象实例（包括null），typeof都返回"object"值。
 
-###instanceof
+### instanceof
 instanceof 用于判断一个变量是否某个对象的实例。
 ```
 function Person() {

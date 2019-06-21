@@ -1,5 +1,5 @@
-##npm常用命令
-###npm install 安装
+## npm常用命令
+### npm install 安装
 ```
 //默认会安装最新的版本
 //全局安装
@@ -43,7 +43,7 @@ $ npm install --save-optional webpack
 $ npm install -O webpack
 ```
 
-###npm uninstall 卸载
+### npm uninstall 卸载
 ```
 $ npm uninstall --help
 npm uninstall [<@scope>/]<pkg>[@<version>]... [--save-prod|--save-dev|--save-optional] [--no-save]
@@ -52,7 +52,7 @@ aliases: un, unlink, remove, rm, r
 //示例，卸载开发版本的模块
 $ npm uninstall webpack --save-dev
 ```
-###更新
+### 更新
 ```
 //检查
 $ npm install -g npm-check
@@ -61,17 +61,17 @@ $ npm-check
 $ npm install -g npm-upgrade
 $ npm-upgrade
 ```
-###检查是否过期
+### 检查是否过期
 ```
 //列出所有已经过时了的模块
 $ npm outdated 
 ```
-###初始化
+### 初始化
 ```
 $ npm init
 $ npm init -y
 ```
-###npm run 启动模块
+### npm run 启动模块
 ```
 //该命令写在package.json文件scripts的start字段中,可以自定义字段用于启动。
   "scripts": {
@@ -81,7 +81,7 @@ $ npm init -y
 
 $ npm run test
 ```
-###npm version 查看版本
+### npm version 查看版本
 ```
 $ npm -v
 5.6.0
@@ -120,7 +120,7 @@ $ npm config list --json
 //临时修改npm镜像
 $ npm config set registry="https://registry.npm.taobao.org"
 ```
-###npm root 查看包的安装路径
+### npm root 查看包的安装路径
 ```
 //查看 node_modules的路径。
 //查看全局
@@ -130,7 +130,7 @@ C:\Users\Administrator\AppData\Roaming\npm\node_modules
 $ npm root
 F:\Code\Tencent\learnReact\09-07\node_modules
 ```
-###查看帮助
+### 查看帮助
 ```
 //会在浏览器打开本地的帮助文件
 $ npm help install

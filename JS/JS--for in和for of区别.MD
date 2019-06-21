@@ -1,6 +1,6 @@
-##for in和for of区别
+## for in和for of区别
 
-##for in
+## for in
 使用for in 也可以遍历数组，但是会存在以下问题：
 
 ```
@@ -39,7 +39,7 @@ for (let key in myObject) {
 }
 ```
 
-##for of
+## for of
 
 与for in 不同的是，for in遍历的是数组的索引（即键名），而for of遍历的是数组元素值。所以如果是遍历数组，使用for of 会更好一些。
 
