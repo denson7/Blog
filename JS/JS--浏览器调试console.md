@@ -1,6 +1,6 @@
 
 ## 使用console
-```
+```js
 // The simple case. Use this instead of alert():
 console.log('This is a console message!');
 
@@ -55,3 +55,4 @@ console.profileEnd('My app performance');
 //Profile 'My app performance' started.
 //Profile 'My app performance' finished.
 ```
+

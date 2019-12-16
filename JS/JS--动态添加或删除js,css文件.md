@@ -1,5 +1,5 @@
 ## 动态添加js,css文件
-```
+```js
 // 动态加载js,css文件
 export const loadJsCssFile = (filename, filetype) => {
   //如果文件类型为 .js ,则创建 script 标签，并设置相应属性
@@ -20,12 +20,12 @@ export const loadJsCssFile = (filename, filetype) => {
 };
 
 // 使用：
-import { removeJsCssFile, loadJsCssFile} from '@emrUtils/function'     
-loadJsCssFile('//imgcache.qq.com/open_proj/proj_qcloud_v2/bee/css/bee.css', 'css');
+import { removeJsCssFile, loadJsCssFile} from '@utils/function'     
+loadJsCssFile('//xx.xx.com/xx/xx/xx/css/xx.css', 'css');
 ```
 
 ## 动态删除js,css文件
-```
+```js
 // 动态删除js,css文件
 export const removeJsCssFile = (filename, filetype) => {
   // 判断文件类型
@@ -47,6 +47,6 @@ export const removeJsCssFile = (filename, filetype) => {
 };
 
 // 使用：
-import { removeJsCssFile, loadJsCssFile} from '@emrUtils/function'
-removeJsCssFile("emr.css", "css");
+import { removeJsCssFile, loadJsCssFile} from '@utils/function'
+removeJsCssFile("xx.css", "css");
 ```

@@ -1,6 +1,6 @@
 ## 复制表单元素内容
-```
-#方法一
+```js
+# 方法一
   // TODO 原生复制功能
   const { addAccountInfo } = this.props
   const _input = document.createElement('input')
@@ -18,7 +18,7 @@
   }
   return result
 }
-#方法二
+# 方法二
 import copy from 'copy-to-clipboard'
 // 使用copy-to-clipboard 包 来复制内容
 handleCopy = () => {
@@ -35,7 +35,7 @@ handleCopy = () => {
 ```
 
 ## 复制带换行符的文本
-```
+```js
 // 点击 复制按钮
 handleCopy = (data) => {
   // input不支持换行，所以使用textarea来实现

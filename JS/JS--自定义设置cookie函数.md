@@ -1,5 +1,5 @@
 ### 自定义设置cookie函数
-```
+```js
 #过滤xss
 const _filterXSS = function (e) {
     if (!e) return e;

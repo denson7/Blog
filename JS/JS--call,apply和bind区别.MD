@@ -1,6 +1,5 @@
-`参考文章 JS--this详解.md`
 ## 示例说明
-```
+```js
 var xw={
   name: "小王",
   gender: "男",
@@ -17,7 +16,7 @@ var xh={
 xw.say();// 小王，男，今年24
 ```
 显示的肯定是：小王 ， 男 ， 今年24。那么如何用xw的say方法来显示xh的数据呢？
-```
+```js
 // 对于call可以这样
 xw.say.call(xh); // 小红，女，今年18
 // 对于apply可以这样
@@ -27,7 +26,7 @@ xw.say.bind(xh)();
 // 说明：call和apply都是对函数的直接调用，而bind方法返回的仍然是一个函数，因此后面还需要()来进行调用才可以。
 ```
 如果有多个参数怎么办呢？
-```
+```js
 var xw={
     name: "小王",
     gender: "男",
@@ -42,7 +41,7 @@ var xh={
     age: 18
 }
 ```
-```
+```js
 // 对于call 传参，第一个参数绑定上下文，第二个参数是传递给调用函数say()的
 xw.say.call(xh,"实验小学","六年级");
 // 对于apply 传参
@@ -63,14 +62,14 @@ xw.say.bind(xh)("实验小学","六年级");
 
 ## 应用
 ### 获取数组中的最大值和最小值
-```
+```js
 const  numbers = [5, 458 , 120 , -215 ];
 const maxInNumbersByApply = Math.max.apply(Math, numbers);   //458
 const maxInNumbersByCall = Math.max.call(Math,5, 458 , 120 , -215); //458
 const minInNumbers = Math.min.apply(Math, numbers); // -215
 ```
 ### 验证是否是数组
-```
+```js
 function isArray(obj){
   return Object.prototype.toString.call(obj) === '[object Array]' ;
 }

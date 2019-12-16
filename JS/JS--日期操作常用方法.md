@@ -1,7 +1,7 @@
 
 ## Date()常用操作
 ### 获取时间戳
-```
+```js
 // 获取当前时间的时间戳,精确到毫秒
 let _timestamp = new Date().getTime(); 
 // 获取指定日期的时间戳,精确到毫秒
@@ -15,7 +15,7 @@ console.log(_timestamp); //1542113950000
 ```
 
 ### 时间戳转为日期
-```
+```js
 // var date = new Date(时间戳); // 获取一个时间对象
 // 拼接字符串
 var date = new Date(1542113950000);
@@ -37,7 +37,7 @@ console.log(Y + M + D + h + m + s); // 2018-11-13 20:59:10
 ```
 
 ### 获取日期字符串
-```
+```js
 # 获取当前日期，形如YYYY-MM-DD HH:mm:ss
 var str = new Date().toLocaleString('cn',{hour12:false}); // 2018/11/13 21:09:08
 var str1 = str.replace(/\//g,'-'); //2018-11-13 21:09:08
@@ -45,7 +45,7 @@ var str1 = str.replace(/\//g,'-'); //2018-11-13 21:09:08
 var str = new Date(new Date().setDate(new Date().getDate()-1)).toLocaleString('cn',{hour12:false}); //2018/11/12 21:12:29
 ```
 ### 差值
-```
+```js
 const DiffTime= (faultDate, completeTime) => {
   if (faultDate == undefined || completeTime == undefined) {
     return '';
@@ -74,7 +74,7 @@ DiffTime('2018-12-24 14:20:11','2018/12/26 14:20:12')
 ```
 ### 格式化
 #### 自定义函数
-```
+```js
 #在Date对象的原型链上添加一个format方法
 Date.prototype.format = function(format) {
   var date = {
@@ -130,7 +130,7 @@ dateFormat(new Date(),"MM dd yyyy hh-mm-ss")
 "12 24 2018 11-59-05"
 ```
 #### 使用moment
-```
+```js
 import moment from 'moment';
 //示例
 moment(new Date()).format("YYYY-MM-DD hh:mm:ss");

@@ -1,6 +1,6 @@
 # 字符串常用函数
 ## 获取字符串长度(含中文)
-```
+```js
 // 方法一
 getStringLength = (str) => {
   // 定义字符串长度
@@ -30,7 +30,7 @@ getStringLength = (str) => {
 ```
 
 ## 字符串去重
-```
+```js
 // 字符串去重
 uniqueString = (str) => {
   const res = []
@@ -44,7 +44,7 @@ uniqueString = (str) => {
 }
 ```
 ## 获取字符串中字符出现的次数
-```
+```js
 // 获取字符串中每个字符出现的次数
 getCountNum = (str) => {
   const res = []
@@ -71,7 +71,7 @@ getCountNum = (str) => {
 }
 ```
 ## 获取最长的子串
-```
+```js
 lengthOfLongestSubstring = (s) => {
   // 用于存放当前最长无重复子串的长度
   let res = 0;
@@ -94,7 +94,7 @@ lengthOfLongestSubstring = (s) => {
 };
 ```
 ## 删除字符中最后一个被指定的字符
-```
+```js
 // 删除字符串中最后一个被指定的字符(单个字符)
 // 方法一
 delLastString = (str, target) => {
