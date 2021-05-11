@@ -73,7 +73,7 @@ git reset只是把修改退回到了git add .之前的状态，也就是说文�
 
 图解
 
-![1620058135333](C:\Users\lds\AppData\Roaming\Typora\typora-user-images\1620058135333.png)
+![1620058135333](https://github.com/denson7/Notes/blob/master/Git/images/1620058135333.png)
 
 图解Git
 
