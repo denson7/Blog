@@ -8,7 +8,7 @@ Node版本需大于 9.0
 使用 import/export 的文件后缀名必须为 .mjs
 ```
 示例
-```
+```javascript
 //main.mjs
 // const fs = require('fs');
 import fs from 'fs';
@@ -22,14 +22,14 @@ node --experimental-modules ./main.mjs
 npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/plugin-proposal-class-properties rimraf  nodemon
 ```
 在项目根目录新建.babelrc文件，添加如下内容
-```
+```javascript
 {
   "presets": ["@babel/preset-env"],
   "plugins": ["@babel/plugin-proposal-class-properties"]
 }
 ```
 修改package.json文件
-```
+```javascript
   "scripts": {
     "build": "babel ./src -d dist", //默认是dist目录的index.js文件
     "start": "npm run build && node dist",
@@ -50,16 +50,17 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/plugin-pr
 npm install babel-register babel-preset-env -D
 ```
 修改文件，使用import替换require
-```
+```javascript
 //main.js
 // const fs = require('fs');
 import fs from 'fs';
 console.log(fs);
 ```
 这里需要新建一个index.js，最后运行node index.js这个文件，即可。
-```
+```javascript
 require('babel-register')({
   presets: ['env'],
 });
 module.exports = require('./main.js');
 ```
+

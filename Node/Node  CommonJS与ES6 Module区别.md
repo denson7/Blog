@@ -1,7 +1,7 @@
 [TOC]
 ## CommonJS
 Node.js中用到的模块导入导出都是依照CommonJS标准来实现的。
-```
+```javascript
 // 导出
 // B.js
 // 定义了函数show
@@ -37,7 +37,7 @@ console.log(bModule.count)  // 3
 bModule.show()  // show方法被调用
 ```
 ## ES6 Module
-```
+```javascript
 // B.js
 // 单个变量或函数导出
 export function show() { console.log('show方法被调用') }
@@ -65,7 +65,7 @@ import * as bModule from './B.js'
 ```
 ### 2.CommonJS导入的是值的拷贝，ES6 Module导入的是值的引用
 验证CommonJS
-```
+```javascript
 // B.js
 let count = 3
 
@@ -93,7 +93,7 @@ console.log('改变后：', count);
 改变后：3
 ```
 验证ES6 Module
-```
+```javascript
 // B.js
 let count = 3
 

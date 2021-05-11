@@ -128,7 +128,7 @@ $ npm root -g
 C:\Users\Administrator\AppData\Roaming\npm\node_modules
 //查看本地
 $ npm root
-F:\Code\Tencent\learnReact\09-07\node_modules
+F:\Code\TC\learnReact\09-07\node_modules
 ```
 ### 查看帮助
 ```

@@ -7,11 +7,9 @@ const ChildInput = forwardRef((props, ref) => {
     return <input ref={ref} type="text"/>
 })
 
-
 export default function forwardRefDemo() {
     //定义一个useRef
     const inputRef = useRef()
-
     return (
         <div>
             <ChildInput ref={inputRef}/>
@@ -35,7 +33,6 @@ const ChildInput = forwardRef((props, ref) => {
 
     return <input ref={inputRef} type="text"/>
 })
-
 
 export default function UseImperativeHandleDemo() {
     //定义一个useRef
