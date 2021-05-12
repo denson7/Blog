@@ -1,7 +1,7 @@
 [TOC]
 ## Suspence 异步组件
 ### 示例
-```js
+```html
 # 定义一个异步组件 setup() 返回promise
 <template>
   <h1>{{ result }}</h1>

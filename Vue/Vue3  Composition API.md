@@ -1,7 +1,7 @@
 
 ## 响应式API
 实现todolist
-```vue
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
