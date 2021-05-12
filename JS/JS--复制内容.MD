@@ -1,5 +1,5 @@
 ## 复制表单元素内容
-```js
+```javascript
 # 方法一
   // TODO 原生复制功能
   const { addAccountInfo } = this.props
@@ -35,7 +35,7 @@ handleCopy = () => {
 ```
 
 ## 复制带换行符的文本
-```js
+```javascript
 // 点击 复制按钮
 handleCopy = (data) => {
   // input不支持换行，所以使用textarea来实现

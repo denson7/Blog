@@ -2,7 +2,7 @@
 
 ## 常用方法
 ### 获取数组中的最大/小值
-```js
+```javascript
 // 使用apply
 const arr = [2, 23, 61, 15, 20, '11'];
 const max = Math.max.apply(null, arr); // 61
@@ -22,7 +22,7 @@ console.log('最大值：', arr[arr.length - 1]); // 61
 console.log('最小值：', arr[0]); // 2
 ```
 ### 遍历获取对象的key和value
-``` js
+```javascript
 const obj = {
   objective: 'binary:logistic',
   numRound: 20,
@@ -64,7 +64,7 @@ for ( const val of Object.values(obj)) {
 }
 ```
 ### 数组去重
-```js
+```javascript
 # 使用lodash的uniq()方法
 var arr = [1, 2, 1, 2, '1', '11'];
 _.uniq(arr);
@@ -87,7 +87,7 @@ function unique(array){
 console.log(unique(arr));//[1, 2, "1", "11"]
 ```
 ### 数组求和
-```js
+```javascript
 // reduce()方法用于对数组中的所有元素调用指定的回调函数，该回调函数的返回值为累积结果，并且将上一次计算的返回值作为参数传递给下一次调用的回调函数。
 // array.reduce(callback[, initialValue]); //callback是调用方法,initialValue是callback初次调用时的第一个参数值
 # 数组求和
@@ -103,7 +103,7 @@ const res2 = obj.reduce((prev,next)=>{
 console.log(res2);// 30 (1+4+9+16)
 ```
 ### 统计数组中相同项的个数
-```js
+```javascript
 var cars = ['BMW','Benz', 'Benz', 'Tesla', 'BMW', 'Toyota'];
 var carsObj = cars.reduce(function (obj, name) {
   obj[name] = obj[name] ? ++obj[name] : 1;
@@ -112,7 +112,7 @@ var carsObj = cars.reduce(function (obj, name) {
 console.log(carsObj); // => { BMW: 2, Benz: 2, Tesla: 1, Toyota: 1 }
 ```
 ### 过滤数组
-```js
+```javascript
 const users = [
   { name: 'tom', age: 10, isStudent: true },
   { name: 'larry', age: 20, isStudent: true },
@@ -132,7 +132,7 @@ const newArr = arr.filter(function (ele, i, array) {
 console.log(newArr);//[1500, 1200, 1800]
 ```
 ### 删除数组中的空值
-```js
+```javascript
 // 使用filter过滤
 const arr = [undefined,undefined,1,'','false',false,true,null,'null']
 const res = _.filter(arr, o => o) // [1, "false", true, "null"]
@@ -140,20 +140,20 @@ const res = _.filter(arr, o => o) // [1, "false", true, "null"]
 const res2 = _.compact(arr) //  [1, "false", true, "null"]
 ```
 ### 删除数组中的某个值
-```js
+```javascript
 const ages = [32, 33, 16, 40]
 const res = ages.filter((item)=>item != 40)
 console.log(res) // [32, 33, 16]
 ```
 ### 求两个数组的交集
-```js
+```javascript
 var arr1 = [1, 2, 3, 4, 5];
 var arr2 = [4, 5, 6, 7, 8, 9]
 var result = arr1.filter(function(n){ return arr2.indexOf(n) > -1 });
 console.log(result); // [4, 5]
 ```
 ### 对数组对象进行排序
-```js
+```javascript
 #方法一自定义函数
 function orderByProperty(prop) {
     var args = Array.prototype.slice.call(arguments, 1);
@@ -209,7 +209,7 @@ _.sortBy(users, ['user', 'age']);
 ```
 
 ### 从数组对象中根据一个对象中的值，获取该对象
-```js
+```javascript
 #使用lodash
 var users = [
   { 'user': 'barney', 'age': 36, 'active': true },
@@ -234,7 +234,7 @@ _.find(users, 'active');
 
 ```
 ### 判断数组中是否存在某个值
-```js
+```javascript
 #使用lodash (推荐)
 const a1 = ['a','b','c']
 const _index = _.findIndex(a1,(item)=>(item==='b'))
@@ -259,7 +259,7 @@ const arr = ["Sam", "Great", "Sample", "High"]
 arr.indexOf("Sam") > -1 
 ```
 ### 获取一个数组对象中某一列的所有key值
-```js
+```javascript
 #使用lodash
 const list = [
   { title: '模型名称', id: '1', key:'model_name' },
@@ -270,7 +270,7 @@ const keys = _.map(list,(item) => (item.key))
 console.log(keys) // ["model_name", "model_version", "task_type"]
 ```
 ### 判断一个数组是否包含另一个数组
-```js
+```javascript
 /**
  * 判断一个数组是否包含另一个数组
  * @param a

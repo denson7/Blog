@@ -13,7 +13,7 @@
 
 #### forEach
 forEach方法用来调用数组的每个元素，将元素传给回调函数 2.forEach对于空数组是不会调用回调函数的。
-```js
+```javascript
 const arr = [0, 2, 4, 6, 8];
 let sum = 0;
 let str = arr.forEach(function(item, index, arr){
@@ -27,7 +27,7 @@ console.log(str); // undefined
 
 #### map
 map方法返回一个新数组，数组中的元素为原始数组调用函数处理后的值。注意，如果是空数组，map不会检测也会返回一个空数组。
-```js
+```javascript
 const arr = [0, 2, 4, 6, 8];
 const res = arr.map((item, index, arr) => {
   console.log(this); // window

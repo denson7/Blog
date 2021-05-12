@@ -19,7 +19,7 @@ CommonJS规范加载模块是`同步的`，也就是说，只有加载完成，�
 `AMD`是”Asynchronous Module Definition”的缩写，意思就是`异步模块定义”`。它采用异步方式加载模块，模块的加载不影响它后面语句的运行。所有依赖这个模块的语句，都定义在一个回调函数中，等到加载完成之后，这个回调函数才会运行。
 
 `核心接口`
-```
+```javascript
 // 模块必须采用特定的define()函数来定义。
 define(id ?, dependencies ?, factory)
 // id:字符串，模块名称(可选)
@@ -47,7 +47,7 @@ define(['Lib'], function (Lib) {
 // 当require()函数加载上面这个模块的时候，就会先加载Lib.js文件。
 ```
 AMD也采用require()语句加载模块，但是不同于CommonJS，它要求两个参数：
-```
+```javascript
 require([module], callback);
 // 第一个参数[module]，是一个数组，里面的成员就是要加载的模块；第二个参数callback，则是加载成功之后的回调函数。
 // 例如
@@ -66,7 +66,7 @@ require(['math'], function (math) {
 
 ## CMD
 `CMD` (Common Module Definition)是另一种JS模块化方案，它与AMD很类似，`不同点`在于：AMD 推崇`依赖前置、提前执行`，CMD推崇`依赖就近、延迟执行`，用的时候再require。
-```
+```javascript
 /** AMD写法 **/
 define(["a", "b", "c", "d", "e", "f"], function (a, b, c, d, e, f) {
   // 等于在最前面声明并初始化了要用到的所有模块

@@ -1,4 +1,3 @@
-
 ## 使用console
 ```js
 // The simple case. Use this instead of alert():

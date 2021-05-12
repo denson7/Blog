@@ -8,7 +8,7 @@ console.log(this);
 //window{},window对象！ 因为在全局作用域下，this指向全局对象。在浏览器中全局对象就是window对象。
 ```
 例如：
-```
+```javascript
 //在控制台输入：
 var name = "denson"
 //通过在控制台输入name来访问其值：
@@ -32,7 +32,7 @@ test();
 ### 声明的对象(Declared Object)
 当this关键字在一个声明对象的内部使用，其值会被`绑定`到`调用该this的函数`的`最近的父对象`。
 例如:
-```
+```javascript
 //继续在浏览器控制台测试
 var person = {
   first: 'Liu',
@@ -49,7 +49,7 @@ person.full();
 在被声明的对象person中的full函数里面使用了this, 那么调用this的full函数的最近的父对象就是person, 因此，this指向person。
 
 复杂的例子：
-```
+```javascript
 var person = {
   first: 'John',
   last: 'Smith',
@@ -75,7 +75,7 @@ person.personTwo.full();
 
 ### New 关键字
 当使用`new`关键字构建一个新的对象，this会`绑定`到这个新对象。我们来看一个例子：
-```
+```javascript
 function Car(make, model) {
   this.make = make;
   this.model = model;
@@ -89,7 +89,7 @@ console.log(myCar);
 ### call, bind, 和apply
 我们可以在call()，bind()，apply()中设置this的绑定对象。这三个函数很类似，但是我们需要注意它们微小的区别。
 例子
-```
+```javascript
 function add(c, d) {
   console.log(this.a + this.b + c + d);
 }
@@ -98,7 +98,7 @@ add(3,4);
 add函数输出NaN, 因为this.a和this.b未定义。
 ```
 现在我们引入对象，并且使用call()和apply()来调用：
-```
+```javascript
 function add(c, d) {
   console.log(this.a + this.b + c + d);
 }
@@ -112,7 +112,7 @@ add.apply(ten, [3,4]);
 因此，this.a指向ten.a,this.b指向ten.b。add.apply()也类似，除了第二个参数是一个数组，用于存储add函数的参数。
 
 bind()函数和call()类似，但是bind()函数不会立即被调用。bind()函数会返回一个函数，并且将this绑定好。接下来我们来用例子来帮助理解bind()函数的应用场景：
-```
+```javascript
 var small = {
   a: 1,
   go: function(b,c,d){
@@ -128,21 +128,21 @@ small.go(2, 3, 4);
 // 输出 10
 ```
 如果我们想使用large.a的值，而不是small.a呢？ 我们可以使用call/apply:
-```
+```javascript
 small.go.call(large, 2, 3, 4);
 // 输出 109
 ```
 但是，如果我们现在还不知道这三个参数应该传入什么值，应该怎么办呢？ 我们可以使用bind:
-```
+```javascript
 var bindTest = small.go.bind(large, 2);
 ```
 如果我们将bindTest在控制台下打印出来，我们会看到：
-```
+```javascript
 console.log(bindTest);
 // 输出 function (b,c,d){console.log(this.a+b+c+d);}
 ```
 注意：该函数已经将this绑定到large对象，并且传入了第一个参数b。所以，我们接下来是需要传入余下的参数即可：
-```
+```javascript
 bindTest(3, 4);
 // 输出 109
 ```

@@ -1,4 +1,4 @@
-- [Jest 单元测试](#Jest 单元测试)
+## Jest 单元测试
   * [安装依赖](#安装依赖)
   * [常用说明](#常用说明)
   * [普通单元测试](#普通单元测试)
@@ -15,7 +15,7 @@ https://jestjs.io/docs/en/getting-started
 $ npm install -D jest ts-jest babel-jest babel-preset-env @types/jest @babel/core @babel/preset-env
 ```
 ### 常用说明
-```js
+```javascript
 # 4 个主要的生命周期函数：
 afterAll(fn, timeout): 当前文件中的所有测试执行完成后执行 fn, 如果 fn 是 promise，jest 会等待 timeout 毫秒，默认 5000.
 beforeAll(fn, timeout): 同 afterAll，在所有测试开始前执行
@@ -41,7 +41,7 @@ afterEach(fn, timeout): 每个 test 执行完后执行 fn，timeout 含义同上
 
 ```
 ### 普通单元测试
-```js
+```javascript
 import {respMsg,  getId, isEqualZero} from '../helper';
 
 describe('test utils function', () => {
@@ -73,7 +73,7 @@ describe('test utils function', () => {
 });
 ```
 ### Koa单元测试
-```js
+```javascript
 // package.json
 "scripts": {
   "dev": "cross-env NODE_ENV=development nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/index.ts",

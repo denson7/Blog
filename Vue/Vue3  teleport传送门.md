@@ -5,7 +5,7 @@
 https://v3.cn.vuejs.org/guide/teleport.html
 ```
 示例
-```vue
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>

@@ -1,7 +1,7 @@
 [TOC]
 ## setup 用法
 ### 基本用法
-```vue
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -77,7 +77,7 @@
 </html>
 ```
 ### 实现computed 计算属性功能
-```vue
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -135,7 +135,7 @@
 </html>
 ```
 ### 实现watch 监听器功能
-```vue
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -216,7 +216,7 @@
 </html>
 ```
 ### 实现生命周期功能
-```vue
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -293,7 +293,7 @@
 </html>
 ```
 ### 使用provide和inject，获取DOM节点
-```vue
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>

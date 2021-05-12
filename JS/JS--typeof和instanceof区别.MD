@@ -1,4 +1,3 @@
-
 ## typeof和instanceof区别
 ### typeof
 typeof 可以用于检测基本数据类型和引用数据类型。
@@ -6,7 +5,7 @@ typeof 可以用于检测基本数据类型和引用数据类型。
 typeof variable
 ```
 返回6种String类型的结果：
-```js
+```javascript
 "undefined" - 如果这个值未定义
 "boolean" - 如果这个值是布尔值
 "string" - 如果这个值是字符串
@@ -23,7 +22,7 @@ typeof主要用于`检测基本数据类型`：数值、字符串、布尔值、
 
 ### instanceof
 instanceof 用于判断一个变量是否某个对象的实例。
-```js
+```javascript
 function Person() {
 }
 

@@ -11,7 +11,7 @@
 对于鼠标滚动、window.resize进行节流控制。
 ```
 ## 示例
-```js
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,7 +107,7 @@
 
 ```
 ### 示例
-```js
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
