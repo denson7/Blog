@@ -95,7 +95,7 @@
 </body>
 </html>
 ```
-
+![function-throttle](https://github.com/denson7/Notes/blob/master/JS/images/function-debounce.png)
 
 ## 函数去抖(debounce)
 当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
@@ -181,7 +181,7 @@
 </body>
 </html>
 ```
-
+![function-debounce](https://github.com/denson7/Notes/blob/master/JS/images/function-debounce.png)
 
 ## 生活中的例子
 想象每天上班大厦底下的电梯。把电梯完成一次运送，类比为一次函数的执行和响应。假设电梯有两种运行策略 throttle和 debounce ，超时设定为15秒，不考虑容量限制。
