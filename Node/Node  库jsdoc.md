@@ -114,6 +114,7 @@ module.exports = {
     </tr>
     </tbody>
 </table>
+
 ### Tag
 Tag 分为两类块Tag和行Tag，块Tag即是以 @开头的，行Tag是使用大括号{}包起来的, 比如 @param 就是块Tag,{@link}就是行Tag。一般情况下我们使用的都是块Tag。
 |功能|Tag|
@@ -123,6 +124,7 @@ Tag 分为两类块Tag和行Tag，块Tag即是以 @开头的，行Tag是使用�
 |结构2|@typedef @memberof @module @export @namespace|
 |结构3|@requires @override @implements @external|
 |文档|@version @author @since @see @deprecated @copyright @description @ignore @license @summary|
+
 #### @type标签
 `@type {typeName}`
 | 类型 | 说明 |
@@ -150,6 +152,7 @@ var FOO = 1;
 /** @const {number} */
 var FOO = 1;
 ```
+
 #### @default标签
 @default标签描述默认值, 值只能为string|number|boolean|null。
  `@default [<some value>]`
